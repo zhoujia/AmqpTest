@@ -10,4 +10,4 @@ python rpc_server2.py
 python rpc_server3.py
 启动两个服务端
 
-然后运行单元测试: RPCProducerTests.测试方法使用多线程两个队列赛数据,server端处理完数据扔回应答队列.
+然后运行单元测试: RPCProducerTests.测试方法使用多线程往两个队列塞入数据,server端处理完数据扔回应答队列.
