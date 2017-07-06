@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+    }
+}
+
+group 'spring_test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+//apply plugin: "spring-boot"
+
+//sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.1.RELEASE")
+    compile("org.springframework.boot:spring-boot:1.5.1.RELEASE")
+
+    compile "org.springframework.boot:spring-boot-starter-amqp"
+
+// https://mvnrepository.com/artifact/mysql/mysql-connector-java
+// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+
+    //testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+
+}
