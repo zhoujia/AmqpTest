@@ -2,7 +2,6 @@ package com.zj.test;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.AsyncRabbitTemplate;
-import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
@@ -18,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitConfig {
     static final String FIBO_CALCULATOR_EXCHANGE_NAME = "app.Exchange";
-    private static final String REQUEST_QUEUE_NAME = "app.request";
+    private static final String REQUEST_QUEUE_NAME = "rpc_queue";
     private static final String REQUEST_QUEUE_NAME1 = "app.request1";
     private static final String REPLY_QUEUE_NAME = "app.reply";
     static final String ROUTING_KEY_NAME1 = "route1";

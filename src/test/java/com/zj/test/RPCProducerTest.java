@@ -36,6 +36,12 @@ public class RPCProducerTest {
 
     private final ExecutorService pool = Executors.newFixedThreadPool(10);
 
+    @Test
+    public void simpTest() {
+        String s = rpcProducer.sendMsgAsync("1", RabbitConfig.ROUTING_KEY_NAME1);
+
+    }
+
 
     @Test
     public void RPCProducerTests() {
